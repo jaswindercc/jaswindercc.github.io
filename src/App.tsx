@@ -99,9 +99,19 @@ export default function App() {
         </p>
       </header>
 
+      {/* What I Do Section */}
+      <section className="mb-12 md:mb-16 max-w-3xl reveal-staggered" style={{ animationDelay: '100ms' }}>
+        <h2 className="text-[10px] font-bold tracking-[0.4em] uppercase opacity-40 mb-4">
+          What I Do
+        </h2>
+        <p className="text-lg md:text-xl font-medium leading-relaxed opacity-80">
+          Architecting high-concurrency cloud ecosystems and leading the integration of agentic AI to drive enterprise-scale automation. I bridge the gap between complex infrastructure and intelligent reasoning loops.
+        </p>
+      </section>
+
       {/* Portfolio Title */}
       <section className="mb-6 md:mb-8">
-        <h2 className="inline-block text-xs md:text-sm font-bold tracking-[0.4em] uppercase opacity-60 reveal-staggered border-b border-success/30 pb-1" style={{ animationDelay: '100ms' }}>
+        <h2 className="inline-block text-xs md:text-sm font-bold tracking-[0.4em] uppercase opacity-60 reveal-staggered border-b border-success/30 pb-1" style={{ animationDelay: '200ms' }}>
           Executive Technical Portfolio
         </h2>
       </section>
@@ -112,7 +122,7 @@ export default function App() {
           <article 
             key={index}
             className="bento-card p-8 md:p-10 flex flex-col justify-between reveal-staggered"
-            style={{ animationDelay: `${200 + index * 100}ms` }}
+            style={{ animationDelay: `${300 + index * 100}ms` }}
           >
             <div>
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
