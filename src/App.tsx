@@ -1,0 +1,196 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+export default function App() {
+  const projects = [
+    {
+      title: "Agentic AI Reasoning Loop for Compliance",
+      company: "[Confidential]",
+      value: "Part of a $12M technology portfolio.",
+      problem: "Manual auditing of complex spatial data was slow, prone to human error, and hindered real-time decision-making.",
+      solution: "Architected a multi-agent \"Reasoning Loop\" (ReAct) with embedded guardrails to automate spatial analysis.",
+      impact: "Reduced manual auditing effort by 70%.",
+      technologies: ["LangGraph", "Vector Search (RAG)", "Python", "Azure AI Studio", "Prompt Engineering"]
+    },
+    {
+      title: "Enterprise Cloud & DevOps Modernization",
+      company: "[Confidential]",
+      value: "$2M+ operational efficiency initiative.",
+      problem: "Fragmented legacy codebases and inconsistent CI/CD pipelines created deployment bottlenecks and security risks.",
+      solution: "Led the end-to-end migration of 100+ mission-critical repositories to a centralized enterprise platform.",
+      impact: "Standardized global deployment blueprints and increased developer velocity through a new Cloud Center of Excellence (CCoE).",
+      technologies: ["GitHub Enterprise (GHE)", "Azure DevOps", "Terraform", "Kubernetes", "GitHub Actions"]
+    },
+    {
+      title: "AI Video Spatial Crowd Analytics",
+      company: "[Confidential]",
+      value: "$5M+ revenue protection project.",
+      problem: "Traditional analytics couldn't accurately detect fare evasion or monitor crowd density in high-concurrency transit environments.",
+      solution: "Directed the delivery of a real-time AI spatial analysis system for video feeds.",
+      impact: "Optimized revenue protection and improved operational security for public transit systems.",
+      technologies: ["PyTorch", "TensorFlow", "Computer Vision", "Azure ML", "High-Concurrency Infrastructure"]
+    },
+    {
+      title: "Regulatory MLOps Project",
+      company: "[Confidential]",
+      value: "$1.5M governance and audit-readiness project.",
+      problem: "AI models lacked transparency and automated monitoring, risking non-compliance with provincial and financial (OSFI) standards.",
+      solution: "Built an automated MLOps pipeline featuring Model Drift detection and full lineage tracking.",
+      impact: "Ensured 100% audit-readiness and met OSFI-level transparency requirements for enterprise AI.",
+      technologies: ["MLflow", "Azure ML", "Databricks Unity Catalog", "Apache Airflow"]
+    },
+    {
+      title: "Enterprise Observability & FinOps Transformation",
+      company: "[Confidential]",
+      value: "Optimized $12M multi-cloud spend.",
+      problem: "High-concurrency systems lacked deep visibility, and cloud costs were scaling inefficiently without governance.",
+      solution: "Implemented a unified observability platform and established FinOps guardrails.",
+      impact: "Dramatically reduced cloud waste and ensured 99.9% uptime for mission-critical payment systems.",
+      technologies: ["Elastic Stack", "Azure Cost Management", "Sentinel", "Prometheus", "Grafana"]
+    },
+    {
+      title: "Retail Banking API Integration Architecture",
+      company: "[Confidential]",
+      value: "$10M+ transactional ecosystem.",
+      problem: "Disconnected retail and banking systems prevented seamless e-commerce transactions and real-time data synchronization.",
+      solution: "Designed complex API integrations and high-traffic SQL Server architectures.",
+      impact: "Supported the full lifecycle of national retail banking applications with high-concurrency post-launch stability.",
+      technologies: [".NET", "SQL Server", "Web API", "Enterprise Service Bus (ESB)"]
+    },
+    {
+      title: "Zero Trust Security Framework for Cloud",
+      company: "[Confidential]",
+      value: "Part of enterprise-wide security hardening.",
+      problem: "Traditional perimeter-based security was insufficient for protecting sensitive data in multi-cloud environments.",
+      solution: "Orchestrated a Zero Trust Architecture aligned with NIST and ISO 27001 standards.",
+      impact: "Secured critical payment data and infrastructure against adversarial threats.",
+      technologies: ["Azure Key Vault", "IAM", "Network Security Groups (NSG)", "Microsoft Sentinel"]
+    }
+  ];
+
+  const ProtectedEmail = () => {
+    // hello@jaswinder.cc reversed
+    const reversed = "cc.redniwsaj@olleh";
+    return (
+      <span 
+        className="inline-block cursor-default select-all font-medium" 
+        style={{ unicodeBidi: 'bidi-override', direction: 'rtl' }}
+      >
+        {reversed}
+      </span>
+    );
+  };
+
+  return (
+    <main
+      className="relative min-h-screen w-full flex flex-col p-8 md:p-16 lg:p-24"
+      role="main"
+      aria-label="Jaswinder Singh Executive Technical Portfolio"
+    >
+      {/* Header */}
+      <header className="z-10 reveal-staggered mb-16 md:mb-24" style={{ animationDelay: '0ms' }}>
+        <h1 className="text-2xl md:text-3xl font-bold tracking-tighter uppercase kinetic-logo">
+          Jaswinder Singh
+        </h1>
+        <p className="text-sm md:text-base opacity-60 font-medium tracking-tight mt-1">
+          AI & Cloud Leader
+        </p>
+      </header>
+
+      {/* Portfolio Title */}
+      <section className="mb-6 md:mb-8">
+        <h2 className="inline-block text-xs md:text-sm font-bold tracking-[0.4em] uppercase opacity-60 reveal-staggered border-b border-success/30 pb-1" style={{ animationDelay: '100ms' }}>
+          Executive Technical Portfolio
+        </h2>
+      </section>
+
+      {/* Projects Grid */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-24">
+        {projects.map((project, index) => (
+          <article 
+            key={index}
+            className="bento-card p-8 md:p-10 flex flex-col justify-between reveal-staggered"
+            style={{ animationDelay: `${200 + index * 100}ms` }}
+          >
+            <div>
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-success rounded-full" aria-hidden="true" />
+                  <span className="text-xs font-bold tracking-widest uppercase text-success">{project.value}</span>
+                </div>
+                <span className="text-[10px] font-bold tracking-widest uppercase opacity-30">Company: {project.company}</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-6 leading-tight">
+                {project.title}
+              </h3>
+              
+              <div className="space-y-6 text-sm md:text-base">
+                <p><span className="font-bold uppercase tracking-wider text-[10px] opacity-40 block mb-1">Problem</span> {project.problem}</p>
+                <p><span className="font-bold uppercase tracking-wider text-[10px] opacity-40 block mb-1">Solution</span> {project.solution}</p>
+                <p><span className="font-bold uppercase tracking-wider text-[10px] opacity-40 block mb-1">Impact</span> {project.impact}</p>
+              </div>
+            </div>
+
+            <div className="mt-10 pt-8 border-t border-onyx/5">
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, techIndex) => (
+                  <span 
+                    key={techIndex}
+                    className="text-[10px] md:text-xs font-bold tracking-widest uppercase opacity-50 bg-onyx/5 px-2 py-1 rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      {/* Footer */}
+      <footer className="flex flex-col md:flex-row justify-between items-end gap-12 z-10 mt-auto pt-12 border-t border-onyx/5">
+        <div className="flex flex-col gap-2">
+          <div className="text-xs md:text-sm font-bold tracking-widest uppercase opacity-40">
+            © 2026 Jaswinder Singh. All Rights Reserved.
+          </div>
+          <div className="flex items-center gap-2 text-sm opacity-60">
+            <span className="text-[10px] font-bold uppercase tracking-widest opacity-40">Contact:</span>
+            <ProtectedEmail />
+          </div>
+        </div>
+        <nav 
+          className="flex flex-wrap justify-end gap-x-8 gap-y-4 text-sm md:text-base font-medium reveal-staggered"
+          style={{ animationDelay: '1000ms' }}
+          aria-label="Social and Contact Links"
+        >
+          <a 
+            href="https://twitter.com/jaswinder_cc" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="magnetic-link hover:opacity-50 underline-offset-4 hover:underline"
+          >
+            Twitter/X
+          </a>
+          <a 
+            href="https://youtube.com/@jaswinder_cc" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="magnetic-link hover:opacity-50 underline-offset-4 hover:underline"
+          >
+            YouTube
+          </a>
+          <a 
+            href="https://github.com/jaswindercc" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="magnetic-link hover:opacity-50 underline-offset-4 hover:underline"
+          >
+            GitHub
+          </a>
+        </nav>
+      </footer>
+    </main>
+  );
+}
